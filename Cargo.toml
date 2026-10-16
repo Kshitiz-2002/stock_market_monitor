@@ -1,0 +1,12 @@
+[package]
+name = "stock_monitor"
+version = "0.1.0"
+edition = "2024"
+description = "ECE 522 Project 1: plots six months of daily closing prices and flags volatile days"
+
+[dependencies]
+# Yahoo Finance client. The `blocking` feature gives a plain synchronous API,
+# so the program does not need an async runtime such as tokio.
+yahoo_finance_api = { version = "5", features = ["blocking"] }
+# Chart rendering to a PNG file.
+plotters = "0.3"
